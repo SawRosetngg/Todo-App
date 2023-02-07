@@ -20,7 +20,7 @@ function init() {
         ...req.body,
         status: "TODO", // [TODO, PROGRESS, DONE]
         startAt: new Date(req.body.startAt),
-        doneAt: new Date(req.body.doneAt),
+        dueAt: new Date(req.body.dueAt),
       };
       TaskService.addTask(data, (error, result) => {
         if (error) {
@@ -43,7 +43,6 @@ function init() {
       const tasks = await TaskService.getTasks();
       return successResponseWithData(res, "Task list", tasks);
     } catch (error) {
-      console.log(error);
       return ErrorResponse(res, error);
     }
   });
@@ -58,6 +57,7 @@ function init() {
       const data = {
         ...req.body,
         startAt: req.body.startAt ? new Date(req.body.startAt) : task.startAt,
+        dueAt: req.body.dueAt ? new Date(req.body.dueAt) : task.dueAt,
         doneAt: req.body.doneAt ? new Date(req.body.doneAt) : task.doneAt,
         modifiedAt: new Date(),
       };

@@ -54,11 +54,10 @@ const TaskService = {
    * Sorting the tasks based on start, due and done date.
    */
   filterTasks: async (keywords, sortBy) => {
-    console.log(sortBy);
     return await dbClient
       .db(configuration.dbName)
       .collection("tasks")
-      .find(keywords)
+      .find({ ...keywords, removedAt: { $eq: null } })
       .sort(sortBy)
       .toArray();
   },
