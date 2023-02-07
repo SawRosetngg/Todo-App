@@ -1,0 +1,13 @@
+# Logs
+logs
+*.log
+
+# dotenv environment variables file
+.env
+
+# Node modules
+node_modules
+
+# Lock files
+*.lock
+
