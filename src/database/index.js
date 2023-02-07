@@ -8,6 +8,7 @@ const client = new MongoClient(dbConnectionString, {
   useUnifiedTopology: true,
 });
 
+/**Mongodb database connection */
 const init = async () => {
   try {
     await client.connect();

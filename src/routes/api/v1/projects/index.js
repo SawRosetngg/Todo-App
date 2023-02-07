@@ -3,7 +3,7 @@ const { successResponseWithData } = require("../../../../common/apiresponses");
 
 const router = express.Router({ mergeParams: true });
 
-function init(dbClient) {
+function init() {
   router.get("/", async (req, res) => {
     return successResponseWithData(res, "Fetching user data", {});
   });

@@ -1,10 +1,11 @@
 const errors = require("../../common/errors");
 
-const createResponseError = err => ({
+const createResponseError = (err) => ({
   status: 0,
-  message: err.message
+  message: err.message,
 });
 
+/**Function for handling error to the client */
 function errorHandler(err, req, res) {
   //eslint-disable-line
   if (errors.isCustomError(err)) {

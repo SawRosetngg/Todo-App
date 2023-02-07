@@ -34,10 +34,11 @@ app.use(
   })
 );
 
-module.exports = (dbClient) => {
+module.exports = () => {
   app.use(express.static(path.join(__dirname, "public")));
 
-  apiV1Routers.init(app, dbClient);
+  /**API routes */
+  apiV1Routers.init(app);
   
   app.use((req, res, next) => {
     const error = new Error("Page Not found");

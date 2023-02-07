@@ -36,6 +36,7 @@ const logger = winston.createLogger({
   ]
 });
 
+/**Initiate logger for the application */
 module.exports = {
   requestLogger,
   errorLogger,
