@@ -32,4 +32,12 @@ npm install or yarn
 ## Run App
 npm start or yarn start
 
-
+```````````````````````````````````````````````````
+## Three API Endpoints for TODO app
+1. api/v1/projects
+    For this endpoint you can view routes/api/v1/projects directory and services/Projects.service.js file
+2. api/v1/tasks
+    For this endpoint you can view routes/api/v1/tasks directory and services/Tasks.service.js file
+3. api/v1/aggregate
+    For this endpoint you can view routes/api/v1/separate directory and services/Separate.service.js file
+```````````````````````````````````````````````````
